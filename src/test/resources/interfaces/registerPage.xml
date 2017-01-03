@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page name="Create your Google Account"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="BasePageXML.xsd">
+  <PageItem name="PageIdentity" by="XPath">//div[@class='lgbx-ltr']/div[1]/img[@src='https://s1.yimg.com/rz/d/yahoo_en-US_f_p_bestfit.png']</PageItem>
+  
+  <PageItem name="txtFirstName" by="XPath">//input[@id='FirstName']</PageItem>
+  <PageItem name="txtLastName" by="XPath">//input[@id='LastName']</PageItem>
+  <PageItem name="txtChooseYourUsername" by="XPath">//input[@id='GmailAddress']</PageItem>
+  <PageItem name="txtPassword" by="XPath">//input[@id='Passwd']</PageItem>
+  <PageItem name="txtConfirmPassword" by="XPath">//input[@id='PasswdAgain']</PageItem>
+  <PageItem name="txtDay" by="XPath">//input[@id='BirthDay']</PageItem>
+  <PageItem name="txtYear" by="XPath">//input[@id='BirthYear']</PageItem>  
+  <PageItem name="txMobilePhone" by="XPath">//input[@id='RecoveryPhoneNumber']</PageItem>  
+  <PageItem name="txtYourCurrentEmailAdress" by="XPath">//input[@id='RecoveryEmailAddress']</PageItem>  
+  <PageItem name="btnNextStep" by="XPath">//input[@id='submitbutton']</PageItem>  
+    
+</Page>
