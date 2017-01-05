@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21335" started-at="2016-12-24T15:19:46Z" finished-at="2016-12-24T15:20:07Z">
+  <suite name="Default suite" duration-ms="32073" started-at="2017-01-05T14:52:36Z" finished-at="2017-01-05T14:53:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21335" started-at="2016-12-24T15:19:46Z" finished-at="2016-12-24T15:20:07Z">
-      <class name="testcases.loginTestCases">
-        <test-method status="PASS" signature="TestInitializeMethod()[pri:0, instance:testcases.loginTestCases@29ee9faa]" name="TestInitializeMethod" is-config="true" duration-ms="4856" started-at="2016-12-24T22:19:46Z" finished-at="2016-12-24T22:19:51Z">
+    <test name="Default test" duration-ms="32073" started-at="2017-01-05T14:52:36Z" finished-at="2017-01-05T14:53:08Z">
+      <class name="testcases.LoginTestCases">
+        <test-method status="PASS" signature="TestInitializeMethod()[pri:0, instance:testcases.LoginTestCases@29ee9faa]" name="TestInitializeMethod" is-config="true" duration-ms="6256" started-at="2017-01-05T21:52:36Z" finished-at="2017-01-05T21:52:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestInitializeMethod -->
-        <test-method status="PASS" signature="LoginTC01()[pri:0, instance:testcases.loginTestCases@29ee9faa]" name="LoginTC01" duration-ms="14236" started-at="2016-12-24T22:19:51Z" finished-at="2016-12-24T22:20:05Z">
+        <test-method status="PASS" signature="LoginTC01()[pri:0, instance:testcases.LoginTestCases@29ee9faa]" name="LoginTC01" duration-ms="18119" started-at="2017-01-05T21:52:42Z" finished-at="2017-01-05T21:53:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTC01 -->
-        <test-method status="PASS" signature="TestCleanupMethod()[pri:0, instance:testcases.loginTestCases@29ee9faa]" name="TestCleanupMethod" is-config="true" duration-ms="2215" started-at="2016-12-24T22:20:05Z" finished-at="2016-12-24T22:20:07Z">
+        <test-method status="PASS" signature="TestCleanupMethod()[pri:0, instance:testcases.LoginTestCases@29ee9faa]" name="TestCleanupMethod" is-config="true" duration-ms="7674" started-at="2017-01-05T21:53:00Z" finished-at="2017-01-05T21:53:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCleanupMethod -->
-      </class> <!-- testcases.loginTestCases -->
+      </class> <!-- testcases.LoginTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

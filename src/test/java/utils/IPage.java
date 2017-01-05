@@ -26,7 +26,7 @@ public abstract class IPage {
 	private long implicitlyWaitSecond;
 	private long explicitlyWaitSecond;
 	
-	private Logger log = Logger.getLogger(IPage.class);
+	private Logger log =Logger.getLogger(IPage.class);
 	private static Map<ITestResult, List<Throwable>> verificationFailuresMap = new HashMap<ITestResult, List<Throwable>>();
 	public static long DEFAULT_TIMEOUT = 10;
 	

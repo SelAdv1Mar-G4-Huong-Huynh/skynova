@@ -1,11 +1,13 @@
 package interfaces;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import common.Constant;
+import utils.IPage;
 
-public class HomePage{
+public class HomePage extends IPage {
 
 	static final By lnkLoginTab = By.xpath("//a[contains(@href,'login.php')]");
     static final By lnkSignUpTab = By.xpath("//a[contains(@href,'signup.php')]");
@@ -23,6 +25,11 @@ public class HomePage{
     {
     	return Constant.driver.findElement(lnkFreeWebSiteTab);
     }
+    public HomePage(WebDriver driver) {
+		setUp(driver);
+		//loadControls("loginPage");
+	}
+
     public HomePage Open()
     {
         Constant.driver.navigate().to(Constant.HomePageUrl);
