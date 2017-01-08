@@ -5,6 +5,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 
 import interfaces.HomePage;
+import interfaces.LoginPage;
+import models.User;
 
 public abstract class BaseTestCase {
 		public WebDriver driver; 
@@ -18,7 +20,12 @@ public abstract class BaseTestCase {
 			HomePage homePage = new HomePage(driver);
 			homePage.Open();
 			///loadControls("loginPage");
-		
+			WebDriver wd = new FirefoxDriver();
+			loginPage = new LoginPage(wd);
+			
+			validUser = new User();
+			validUser.setUsername("testUsername@yahoo.com");
+			validUser.setPassword("testPass");
 		}
 
 		@AfterTest
