@@ -1,12 +1,13 @@
 package interfaces;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import common.Constant;
 
 public class SignUpPage {
-
+	private WebDriver driver;
     static final By txtEmailAddress = By.xpath("//input[@name='emailaddress']");
     static final By txtPassword = By.xpath("//input[@name='password']");
     static final By btnLogin = By.xpath("//button[@name='submit']");
@@ -14,21 +15,21 @@ public class SignUpPage {
 
     public WebElement TxtEmailAddress()
     {
-    	return Constant.driver.findElement(txtEmailAddress);
+    	return driver.findElement(txtEmailAddress);
     }
     public WebElement TxtPassword()
     {
-    	return Constant.driver.findElement(txtPassword);
+    	return driver.findElement(txtPassword);
     }
     
     public WebElement BtnLogin()
     {
-        return Constant.driver.findElement(btnLogin);
+        return driver.findElement(btnLogin);
     }
 
     public WebElement LblErorMsg()
     {
-    	return Constant.driver.findElement(lblErorMsg);
+    	return driver.findElement(lblErorMsg);
     }
  
     public SignUpPage Login(String username, String password)
@@ -47,7 +48,7 @@ public class SignUpPage {
     }
     public SignUpPage Open()
     {
-        Constant.driver.navigate().to(Constant.HomePageUrl);
+        driver.navigate().to(Constant.HomePageUrl);
         return this;
     }
 

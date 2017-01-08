@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testcases.loginTestCases">
+      <class name="testcases.LoginTestCases">
         <methods>
-          <include name="TestCleanupMethod"/>
           <include name="TestInitializeMethod"/>
           <include name="LoginTC01"/>
         </methods>
-      </class> <!-- testcases.loginTestCases -->
+      </class> <!-- testcases.LoginTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

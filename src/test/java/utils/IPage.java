@@ -643,7 +643,6 @@ public abstract class IPage {
 		verificationFailuresMap.put(Reporter.getCurrentTestResult(),
 				verificationFailures);
 		verificationFailures.add(e);
-	}
-
+	}	
 	
 }

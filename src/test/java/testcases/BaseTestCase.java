@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 
-import common.Constant;
+import interfaces.HomePage;
 
 public abstract class BaseTestCase {
 		public WebDriver driver; 
@@ -13,15 +13,19 @@ public abstract class BaseTestCase {
 		public void TestInitializeMethod() {
 			System.out.println("Run Test Initialize");
 			// Start Firefox browser and maximize window
-			Constant.driver = new FirefoxDriver();
-			Constant.driver.manage().window().maximize();
+			driver = new FirefoxDriver();
+			driver.manage().window().maximize();
+			HomePage homePage = new HomePage(driver);
+			homePage.Open();
+			///loadControls("loginPage");
+		
 		}
 
 		@AfterTest
 		public void TestCleanupMethod() {
 			System.out.println("Run Test Cleanup");
 			// Close browser
-			Constant.driver.quit();
+			driver.quit();
 		}
 
 		/*

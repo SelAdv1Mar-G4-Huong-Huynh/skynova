@@ -3,38 +3,49 @@ package interfaces;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.log4testng.Logger;
+
+//import com.thoughtworks.selenium.webdriven.commands.GetAlert;
 
 import common.Constant;
+import utils.ControlFactory;
 import utils.IPage;
 
-public class HomePage extends IPage {
-
+public class HomePage extends ControlFactory {
+	/*private WebDriver driver;
+	
 	static final By lnkLoginTab = By.xpath("//a[contains(@href,'login.php')]");
     static final By lnkSignUpTab = By.xpath("//a[contains(@href,'signup.php')]");
     static final By lnkFreeWebSiteTab = By.xpath("//a[contains(@href,'signup.php')]");
     
     public WebElement LnkLoginTab()
     {
-    	return Constant.driver.findElement(lnkLoginTab);
+    	return driver.findElement(lnkLoginTab);
+    	//return Constant.driver.findElement(lnkLoginTab);
     }
     public WebElement LnkSignUpTab()
     {
-    	return Constant.driver.findElement(lnkSignUpTab);
+    	return driver.findElement(lnkSignUpTab);
+    	//return Constant.driver.findElement(lnkSignUpTab);
     }
     public WebElement LnkFreeWebSiteTab()
     {
-    	return Constant.driver.findElement(lnkFreeWebSiteTab);
-    }
-    public HomePage(WebDriver driver) {
+    	return driver.findElement(lnkFreeWebSiteTab);
+    	//return Constant.driver.findElement(lnkFreeWebSiteTab);
+    }*/
+	public Logger log = Logger.getLogger(HomePage.class);
+	
+    public HomePage(WebDriver driver) {    	
 		setUp(driver);
-		//loadControls("loginPage");
+		loadControls("HomePage");
 	}
 
-    public HomePage Open()
+    /*public HomePage Open()
     {
-        Constant.driver.navigate().to(Constant.HomePageUrl);
+    	driver.navigate().to(Constant.HomePageUrl);
+        //Constant.driver.navigate().to(Constant.HomePageUrl);
         return this;
-    }
+    }*/
     public SignUpPage goToSignUpPage(){
     	this.LnkSignUpTab().click();
     	return new SignUpPage();

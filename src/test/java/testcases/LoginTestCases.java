@@ -21,14 +21,12 @@ public class LoginTestCases extends BaseTestCase{
 	 ************************************************/
   @Test
   public void LoginTC01(){
-	  System.out.println("TC01 - User can log into Twitter with invalid username and password.");  
-      
-	  HomePage homePage = new HomePage(driver).Open();	  
+	  System.out.println("TC01 - User can log into Twitter with invalid username and password.");        
+	  //HomePage homePage = new HomePage(driver).Open();	  
       SignUpPage signUpPage =homePage.goToSignUpPage();     
       String actualMsg = signUpPage.LoginInvalid("fdfdsg", Constant.Password);
       System.out.println(actualMsg);      
-      String expectedMsg = "Incorrectly formatted e-mail address. \"@\"-sign missing";
-      
+      String expectedMsg = "Incorrectly formatted e-mail address. \"@\"-sign missing";      
       System.out.println(expectedMsg);
       Assert.assertTrue(actualMsg.contains(expectedMsg));
   }
