@@ -1,32 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" total="1" passed="0">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Default suite" duration-ms="5159" started-at="2017-01-08T06:58:53Z" finished-at="2017-01-08T06:58:58Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="5159" started-at="2017-01-08T06:58:53Z" finished-at="2017-01-08T06:58:58Z">
-      <class name="testcases.LoginTestCases">
-        <test-method status="FAIL" signature="TestInitializeMethod()[pri:0, instance:testcases.LoginTestCases@29ee9faa]" name="TestInitializeMethod" is-config="true" duration-ms="0" started-at="2017-01-08T13:58:53Z" finished-at="2017-01-08T13:58:53Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
+<testng-results skipped="0" failed="1" total="1" passed="0">
+	<reporter-output>
+	</reporter-output>
+	<suite name="Default suite" duration-ms="29800" started-at="2017-01-15T18:06:52Z"
+		finished-at="2017-01-15T18:07:22Z">
+		<groups>
+		</groups>
+		<test name="Default test" duration-ms="29800" started-at="2017-01-15T18:06:52Z"
+			finished-at="2017-01-15T18:07:22Z">
+			<class name="testcases.LoginTestCases">
+				<test-method status="PASS"
+					signature="TestInitializeMethod()[pri:0, instance:testcases.LoginTestCases@29ee9faa]"
+					name="TestInitializeMethod" is-config="true" duration-ms="19553"
+					started-at="2017-01-16T01:06:52Z" finished-at="2017-01-16T01:07:11Z">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- TestInitializeMethod -->
+				<test-method status="FAIL"
+					signature="LoginTC01()[pri:0, instance:testcases.LoginTestCases@29ee9faa]"
+					name="LoginTC01" duration-ms="4550" started-at="2017-01-16T01:07:11Z"
+					finished-at="2017-01-16T01:07:16Z">
+					<exception class="java.lang.NullPointerException">
+						<full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at org.openqa.selenium.support.events.EventFiringWebDriver.extractInterfaces(EventFiringWebDriver.java:117)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.<init>(EventFiringWebDriver.java:89)
-	at utils.IPage.setupEventDriver(IPage.java:74)
-	at utils.IPage.setUp(IPage.java:40)
-	at interfaces.HomePage.<init>(HomePage.java:29)
-	at testcases.BaseTestCase.TestInitializeMethod(BaseTestCase.java:19)
+	at utils.ControlFactory.getControl(ControlFactory.java:55)
+	at interfaces.SignUpPage.LoginInvalid(SignUpPage.java:44)
+	at testcases.LoginTestCases.LoginTC01(LoginTestCases.java:26)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
-	at org.testng.TestRunner.run(TestRunner.java:609)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
@@ -40,20 +51,19 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestInitializeMethod -->
-        <test-method status="SKIP" signature="LoginTC01()[pri:0, instance:testcases.LoginTestCases@29ee9faa]" name="LoginTC01" duration-ms="6" started-at="2017-01-08T13:58:58Z" finished-at="2017-01-08T13:58:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginTC01 -->
-        <test-method status="SKIP" signature="TestCleanupMethod()[pri:0, instance:testcases.LoginTestCases@29ee9faa]" name="TestCleanupMethod" is-config="true" duration-ms="0" started-at="2017-01-08T13:58:58Z" finished-at="2017-01-08T13:58:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCleanupMethod -->
-      </class> <!-- testcases.LoginTestCases -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+						</full-stacktrace>
+					</exception> <!-- java.lang.NullPointerException -->
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- LoginTC01 -->
+				<test-method status="PASS"
+					signature="TestCleanupMethod()[pri:0, instance:testcases.LoginTestCases@29ee9faa]"
+					name="TestCleanupMethod" is-config="true" duration-ms="5673"
+					started-at="2017-01-16T01:07:16Z" finished-at="2017-01-16T01:07:22Z">
+					<reporter-output>
+					</reporter-output>
+				</test-method> <!-- TestCleanupMethod -->
+			</class> <!-- testcases.LoginTestCases -->
+		</test> <!-- Default test -->
+	</suite> <!-- Default suite -->
 </testng-results>

@@ -4,28 +4,22 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 
+import common.Constant;
+import interfaces.BasePage;
 import interfaces.HomePage;
-import interfaces.LoginPage;
-import models.User;
-
 public abstract class BaseTestCase {
 		public WebDriver driver; 
+		public HomePage homePage;
+		//BasePage page;
 		
 		@BeforeTest
 		public void TestInitializeMethod() {
 			System.out.println("Run Test Initialize");
 			// Start Firefox browser and maximize window
 			driver = new FirefoxDriver();
-			driver.manage().window().maximize();
-			HomePage homePage = new HomePage(driver);
-			homePage.Open();
-			///loadControls("loginPage");
-			WebDriver wd = new FirefoxDriver();
-			loginPage = new LoginPage(wd);
-			
-			validUser = new User();
-			validUser.setUsername("testUsername@yahoo.com");
-			validUser.setPassword("testPass");
+			driver.manage().window().maximize();	
+			BasePage basePage = new BasePage(driver);
+			homePage = basePage.Open();
 		}
 
 		@AfterTest

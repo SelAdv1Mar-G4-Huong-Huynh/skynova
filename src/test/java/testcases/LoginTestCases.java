@@ -1,14 +1,14 @@
 package testcases;
 
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import common.Constant;
-import interfaces.HomePage;
 import interfaces.SignUpPage;
+
 
 public class LoginTestCases extends BaseTestCase{
 
-	HomePage homePage;
 	/************************************************
 	 * Testcase 01: TC01 - User can log into Twitter with invalid username and password.
 	 * 
@@ -21,15 +21,30 @@ public class LoginTestCases extends BaseTestCase{
 	 ************************************************/
   @Test
   public void LoginTC01(){
-	  System.out.println("TC01 - User can log into Twitter with invalid username and password.");        
-	  //HomePage homePage = new HomePage(driver).Open();	  
-      SignUpPage signUpPage =homePage.goToSignUpPage();     
+	  System.out.println("TC01 - User can log into Twitter with invalid username and password.");
+      SignUpPage signUpPage = homePage.goToSignUpPage();     
       String actualMsg = signUpPage.LoginInvalid("fdfdsg", Constant.Password);
       System.out.println(actualMsg);      
       String expectedMsg = "Incorrectly formatted e-mail address. \"@\"-sign missing";      
       System.out.println(expectedMsg);
       Assert.assertTrue(actualMsg.contains(expectedMsg));
   }
+  /*@BeforeTest
+	public void TestInitializeMethod() {
+		System.out.println("Run Test Initialize");
+		// Start Firefox browser and maximize window
+		WebDriver driver = new FirefoxDriver();	
+		driver.manage().window().maximize();
+		  HomePage homePage = new HomePage(driver);
+			homePage.Open();
+	}
+
+	@AfterTest
+	public void TestCleanupMethod() {
+		System.out.println("Run Test Cleanup");
+		// Close browser
+		homePage.close();
+	}*/
   
  
 }

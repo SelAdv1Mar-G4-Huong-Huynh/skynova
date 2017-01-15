@@ -20,15 +20,19 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.log4testng.Logger;
 
-public abstract class IPage {
-	private WebDriver driver;
+public abstract class IWebDriver{
+	public WebDriver driver;
 	private EventFiringWebDriver eventDriver;
 	private long implicitlyWaitSecond;
 	private long explicitlyWaitSecond;
 	
-	private Logger log =Logger.getLogger(IPage.class);
+	private Logger log =Logger.getLogger(IWebDriver.class);
 	private static Map<ITestResult, List<Throwable>> verificationFailuresMap = new HashMap<ITestResult, List<Throwable>>();
 	public static long DEFAULT_TIMEOUT = 10;
+	
+	public IWebDriver(WebDriver wdriver){
+		setUp(wdriver);
+	}
 	
 	/*********************************************************
 	 * Setup webdriver for a page
@@ -38,6 +42,10 @@ public abstract class IPage {
 		setImplicitlyWaitSecond(DEFAULT_TIMEOUT);
 		setExplicitlyWaitSecond(DEFAULT_TIMEOUT);
 		setupEventDriver();
+	}
+	
+	public WebDriver getDriver(){
+		return this.driver;
 	}
 	/*********************************************************
 	 * Set/Get ExplicitlyWaitSecond
@@ -129,7 +137,7 @@ public abstract class IPage {
 			return true;
 		} else {
 			log.trace("No element found: " + locator.toString());
-			return false;
+			return false;	
 		}
 	}
 
