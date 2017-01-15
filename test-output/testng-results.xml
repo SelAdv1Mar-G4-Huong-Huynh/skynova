@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="1" total="1" passed="0">
-	<reporter-output>
-	</reporter-output>
-	<suite name="Default suite" duration-ms="29800" started-at="2017-01-15T18:06:52Z"
-		finished-at="2017-01-15T18:07:22Z">
-		<groups>
-		</groups>
-		<test name="Default test" duration-ms="29800" started-at="2017-01-15T18:06:52Z"
-			finished-at="2017-01-15T18:07:22Z">
-			<class name="testcases.LoginTestCases">
-				<test-method status="PASS"
-					signature="TestInitializeMethod()[pri:0, instance:testcases.LoginTestCases@29ee9faa]"
-					name="TestInitializeMethod" is-config="true" duration-ms="19553"
-					started-at="2017-01-16T01:06:52Z" finished-at="2017-01-16T01:07:11Z">
-					<reporter-output>
-					</reporter-output>
-				</test-method> <!-- TestInitializeMethod -->
-				<test-method status="FAIL"
-					signature="LoginTC01()[pri:0, instance:testcases.LoginTestCases@29ee9faa]"
-					name="LoginTC01" duration-ms="4550" started-at="2017-01-16T01:07:11Z"
-					finished-at="2017-01-16T01:07:16Z">
-					<exception class="java.lang.NullPointerException">
-						<full-stacktrace>
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="30450" started-at="2017-01-15T18:10:21Z" finished-at="2017-01-15T18:10:51Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="30450" started-at="2017-01-15T18:10:21Z" finished-at="2017-01-15T18:10:51Z">
+      <class name="testcases.LoginTestCases">
+        <test-method status="PASS" signature="TestInitializeMethod()[pri:0, instance:testcases.LoginTestCases@29ee9faa]" name="TestInitializeMethod" is-config="true" duration-ms="21744" started-at="2017-01-16T01:10:21Z" finished-at="2017-01-16T01:10:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestInitializeMethod -->
+        <test-method status="FAIL" signature="LoginTC01()[pri:0, instance:testcases.LoginTestCases@29ee9faa]" name="LoginTC01" duration-ms="4056" started-at="2017-01-16T01:10:43Z" finished-at="2017-01-16T01:10:47Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
 	at utils.ControlFactory.getControl(ControlFactory.java:55)
 	at interfaces.SignUpPage.LoginInvalid(SignUpPage.java:44)
@@ -51,19 +43,16 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 ]]>
-						</full-stacktrace>
-					</exception> <!-- java.lang.NullPointerException -->
-					<reporter-output>
-					</reporter-output>
-				</test-method> <!-- LoginTC01 -->
-				<test-method status="PASS"
-					signature="TestCleanupMethod()[pri:0, instance:testcases.LoginTestCases@29ee9faa]"
-					name="TestCleanupMethod" is-config="true" duration-ms="5673"
-					started-at="2017-01-16T01:07:16Z" finished-at="2017-01-16T01:07:22Z">
-					<reporter-output>
-					</reporter-output>
-				</test-method> <!-- TestCleanupMethod -->
-			</class> <!-- testcases.LoginTestCases -->
-		</test> <!-- Default test -->
-	</suite> <!-- Default suite -->
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTC01 -->
+        <test-method status="PASS" signature="TestCleanupMethod()[pri:0, instance:testcases.LoginTestCases@29ee9faa]" name="TestCleanupMethod" is-config="true" duration-ms="4627" started-at="2017-01-16T01:10:47Z" finished-at="2017-01-16T01:10:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCleanupMethod -->
+      </class> <!-- testcases.LoginTestCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
