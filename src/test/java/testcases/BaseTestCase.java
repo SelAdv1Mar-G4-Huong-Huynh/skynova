@@ -3,8 +3,6 @@ package testcases;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
-
-import common.Constant;
 import interfaces.BasePage;
 import interfaces.HomePage;
 public abstract class BaseTestCase {
