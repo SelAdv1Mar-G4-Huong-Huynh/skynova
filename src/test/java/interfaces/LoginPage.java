@@ -1,9 +1,12 @@
 package interfaces;
 
 import org.openqa.selenium.WebDriver;
+
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import common.Constant;
 
-public class SignUpPage extends BasePage{
+public class LoginPage extends BasePage{
    /* static final By txtEmailAddress = By.xpath("//input[@name='emailaddress']");
     static final By txtPassword = By.xpath("//input[@name='password']");
     static final By btnLogin = By.xpath("//button[@name='submit']");
@@ -28,23 +31,28 @@ public class SignUpPage extends BasePage{
     	return driver.findElement(lblErorMsg);
     }
  */
-	public SignUpPage(WebDriver wdriver) {    	
+	public LoginPage(WebDriver wdriver) {    	
 		super(wdriver);
-		loadControls("SignUpPage");
+		loadControls("LoginPage");
 	}
-    public SignUpPage Login(String username, String password)
+    public LoginPage Login(String username, String password)
     {
     	type(getControl("txtEmailAddress"), Constant.UserName);
     	type(getControl("txtPassword"),Constant.Password);
     	click(getControl("btnLogin"));    	
-        return new SignUpPage(driver);
+        return new LoginPage(driver);
     }
     public String LoginInvalid(String username, String password)
     {
     	type(getControl("txtEmailAddress"), username);
     	type(getControl("txtPassword"), password);
-    	click(getControl("btnLogin"));  
-    	return getAttribute(getControl("lblErrorMsg"),"text");
+    	click(getControl("btnLogin")); 
+    	Boolean a = isElementExists(getControl("lblErorMsg"));
+    	System.out.println(a.toString());
+    	waitForElementDisplayed(getControl("lblErorMsg"),true, DEFAULT_TIMEOUT );
+    	String b = getText(getControl("lblErorMsg"));
+   
+    	return b;
         
     }
   

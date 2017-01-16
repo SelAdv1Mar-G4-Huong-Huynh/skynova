@@ -4,7 +4,7 @@ package testcases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import common.Constant;
-import interfaces.SignUpPage;
+import interfaces.LoginPage;
 
 
 public class LoginTestCases extends BaseTestCase{
@@ -22,10 +22,11 @@ public class LoginTestCases extends BaseTestCase{
   @Test
   public void LoginTC01(){
 	  System.out.println("TC01 - User can log into Twitter with invalid username and password.");
-      SignUpPage signUpPage = homePage.goToSignUpPage();     
-      String actualMsg = signUpPage.LoginInvalid("fdfdsg", Constant.Password);
+      LoginPage loginPage = homePage.goToLoginPage();     
+      String actualMsg = loginPage.LoginInvalid("fdfdsg", Constant.Password);
       System.out.println(actualMsg);      
-      String expectedMsg = "Incorrectly formatted e-mail address. \"@\"-sign missing";      
+     // String expectedMsg = "Incorrectly formatted e-mail address. \"@\"-sign missing"; 
+      String expectedMsg = "Incorrect e-mail address. Please check the spelling of your e-mail address and try again.";
       System.out.println(expectedMsg);
       Assert.assertTrue(actualMsg.contains(expectedMsg));
   }

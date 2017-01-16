@@ -162,7 +162,8 @@ public class ControlFactory extends IWebDriver{
 	 ******************************************************************/
 	private String getXMLFilePath(String resourceName){
 		String path = System.getProperty("user.dir");
-		return path + "/src/test/resources/Interfaces/" + resourceName + ".xml";
+		path = path + "/src/test/resources/interfaces/" + resourceName + ".xml";
+		return path;
 	}
 
 }

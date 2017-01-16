@@ -132,7 +132,7 @@ public abstract class IWebDriver{
 	 * @return true if element is exists
 	 *********************************************************/
 	public boolean isElementExists(By locator) {
-		if (eventDriver.findElements(locator).size() > 0) {
+		if (driver.findElement(locator)!= null) {
 			log.trace("Element found: " + locator.toString() + "(" + eventDriver.findElements(locator).size() + ")");
 			return true;
 		} else {
@@ -245,7 +245,9 @@ public abstract class IWebDriver{
 	 * @return value of the attribute
 	 *********************************************************/
 	public String getAttribute(By locator, String attribute) {
-		return (isElementExists(locator)) ? eventDriver.findElement(locator).getAttribute(attribute) : null;
+		String text = driver.findElement(locator).getAttribute(attribute);
+		System.out.println(text);
+		return (isElementExists(locator)) ? driver.findElement(locator).getAttribute(attribute) : null;
 	}
 
 	public String getAttribute(String locator, String attribute) {

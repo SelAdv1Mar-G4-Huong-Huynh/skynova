@@ -19,10 +19,15 @@ public class HomePage extends BasePage {
     	openURL(Constant.HomePageUrl);     
         return this;
     }
-    public SignUpPage goToSignUpPage(){
+   /* public LoginPage goToSignUpPage(){
     	click(getControl("lnkSignUpTab"));
     	return new SignUpPage(driver);
+    }*/
+    public LoginPage goToLoginPage(){
+    	click(getControl("lnkLoginTab"));
+    	return new LoginPage(driver);
     }
+    
     public FreeWebSitePage goToSignFreeWebSite(){
     	click(getControl("lnkSingUpTab"));
     	//PageFactory.initElements(driver,LoginPage.class);
