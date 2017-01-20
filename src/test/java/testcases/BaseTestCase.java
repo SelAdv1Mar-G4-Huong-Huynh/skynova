@@ -4,10 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 import interfaces.BasePage;
+import interfaces.EditWebsitePage;
 import interfaces.HomePage;
 public abstract class BaseTestCase {
 		public WebDriver driver; 
 		public HomePage homePage;
+		public EditWebsitePage editWebPage;
 		//BasePage page;
 		
 		@BeforeTest
