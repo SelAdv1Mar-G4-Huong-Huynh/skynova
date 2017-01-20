@@ -35,12 +35,12 @@ public class LoginPage extends BasePage{
 		super(wdriver);
 		loadControls("LoginPage");
 	}
-    public LoginPage Login(String username, String password)
+    public EditWebsitePage Login(String username, String password)
     {
     	type(getControl("txtEmailAddress"), Constant.UserName);
     	type(getControl("txtPassword"),Constant.Password);
     	click(getControl("btnLogin"));    	
-        return new LoginPage(driver);
+        return new EditWebsitePage(driver);
     }
     public String LoginInvalid(String username, String password)
     {
