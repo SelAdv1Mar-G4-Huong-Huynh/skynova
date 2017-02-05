@@ -18,11 +18,7 @@ public class BasePage extends ControlFactory {
     	openURL(Constant.HomePageUrl);     
         return new HomePage(driver);
     }
-	/**
-	* @author Huong Huynh
-	* <summary>
-	* Opens the fire fox browser
-	*/
+	
 	/*
     public void openBrowser(String browserName)
     {

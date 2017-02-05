@@ -2,7 +2,7 @@ package testcases;
 
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import common.Constant;
 import interfaces.EditWebsitePage;
 import interfaces.LoginPage;
@@ -33,7 +33,7 @@ public class LoginTestCases extends BaseTestCase{
   }
   
   /************************************************
-	 * Testcase 01: TC02 - User can log into Twitter with invalid username and password.
+	 * Testcase 02: TC02 - User can log into Twitter with invalid username and password.
 	 * 
 	 * Steps 1 - Navigate to Skynova Website
 	 * Steps 2 - Click on Login tab
@@ -42,34 +42,33 @@ public class LoginTestCases extends BaseTestCase{
 	 * VP Page will navigate to Create Website Page and the email and logout link display
 	 * 
 	 ************************************************/
-  @Test
+  @Test  
   public void LoginTC02(){
-	  System.out.println("TC01 - User can log into Twitter with valid username and password.");
+	  System.out.println("TC02 - User can log into Twitter with valid username and password.");
       LoginPage loginPage = homePage.goToLoginPage();     
-      EditWebsitePage editPage = loginPage.Login(Constant.UserName, Constant.Password);
-      editPage.check("", true);
-      //System.out.println(actualMsg);      
-     // String expectedMsg = "Incorrectly formatted e-mail address. \"@\"-sign missing"; 
-      String expectedMsg = "Incorrect e-mail address. Please check the spelling of your e-mail address and try again.";
-      System.out.println(expectedMsg);
-     // Assert.assertTrue(actualMsg.contains(expectedMsg));
+      EditWebsitePage editPage = loginPage.Login(Constant.UserName, Constant.Password);      
+      Assert.assertTrue(editPage.isElementExists(editPage.getControl("lblEmail")));   
+      Assert.assertTrue(editPage.isElementExists(editPage.getControl("lnkLogout")));
   }
-  /*@BeforeTest
-	public void TestInitializeMethod() {
-		System.out.println("Run Test Initialize");
-		// Start Firefox browser and maximize window
-		WebDriver driver = new FirefoxDriver();	
-		driver.manage().window().maximize();
-		  HomePage homePage = new HomePage(driver);
-			homePage.Open();
-	}
-
-	@AfterTest
-	public void TestCleanupMethod() {
-		System.out.println("Run Test Cleanup");
-		// Close browser
-		homePage.close();
-	}*/
   
+  /************************************************
+ 	 * Testcase 03: TC03 - Update user profile.
+ 	 * 
+ 	 * Steps 1 - Navigate to Skynova Website
+ 	 * Steps 2 - Click on Login tab
+ 	 * Steps 3 - Enter valid Email and Password
+ 	 * Steps 4 - Click on "Login" button
+ 	 * Steps 5 - Move mouse on Settings menu and select My Profile
+ 	 * Steps 6 - Enter profile info (name, address, time zone, date formate..)
+ 	 * Steps 7 - Click on Submit button
+ 	 * VP: Message"Profile successfully saved " with update successfully icon is displayed
+ 	 ************************************************/
+   @Test  
+   public void LoginTC03(){
+ 	  System.out.println("TC03 - Update user profile.");
+       LoginPage loginPage = homePage.goToLoginPage();     
+       EditWebsitePage editPage = loginPage.Login(Constant.UserName, Constant.Password);      
+       
+   }
  
 }

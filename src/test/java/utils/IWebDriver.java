@@ -546,8 +546,6 @@ public abstract class IWebDriver{
 		return false;
 	}
 
-	
-
 	public static void assertTrue(boolean condition) {
 		Assert.assertTrue(condition);
 	}

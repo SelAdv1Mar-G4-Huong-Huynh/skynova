@@ -14,7 +14,8 @@ public class HomePage extends BasePage {
 		loadControls("HomePage");
 	}
 
-    public HomePage Open()
+    @Override
+	public HomePage Open()
     {
     	openURL(Constant.HomePageUrl);     
         return this;

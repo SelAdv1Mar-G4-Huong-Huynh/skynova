@@ -7,7 +7,7 @@
         <methods>
           <include name="TestCleanupMethod"/>
           <include name="TestInitializeMethod"/>
-          <include name="LoginTC01"/>
+          <include name="LoginTC02"/>
         </methods>
       </class> <!-- testcases.LoginTestCases -->
     </classes>

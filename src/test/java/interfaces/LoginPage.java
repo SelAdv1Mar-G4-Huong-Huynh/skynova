@@ -2,8 +2,6 @@ package interfaces;
 
 import org.openqa.selenium.WebDriver;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 import common.Constant;
 
 public class LoginPage extends BasePage{
@@ -50,10 +48,8 @@ public class LoginPage extends BasePage{
     	Boolean a = isElementExists(getControl("lblErorMsg"));
     	System.out.println(a.toString());
     	waitForElementDisplayed(getControl("lblErorMsg"),true, DEFAULT_TIMEOUT );
-    	String b = getText(getControl("lblErorMsg"));
-   
-    	return b;
-        
+    	String b = getText(getControl("lblErorMsg"));   
+    	return b;        
     }
   
 
